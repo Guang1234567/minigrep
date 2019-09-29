@@ -1,23 +1,31 @@
-mod search;
-mod cache;
-
 use std::{env, fs};
+use std::env::Args;
 use std::error::Error;
 
-pub struct Config<'a> {
-    pub query: &'a String,
-    pub file_name: &'a String,
+mod search;
+mod cache;
+mod iterator;
+
+pub struct Config {
+    pub query: String,
+    pub file_name: String,
     pub case_sensitive: bool,
 }
 
-impl<'a> Config<'a> {
-    pub fn new(args: &'a Vec<String>) -> Result<Self, &str> {
-        if args.len() < 3 {
-            return Err("not enough arguments");
-        }
+impl Config {
+    pub fn new<'a>(mut args: Args) -> Result<Self, &'a str> {
+        args.next();
 
-        let query = &args[1];
-        let file_name = &args[2];
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string"),
+        };
+
+        let file_name = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a file name"),
+        };
+
         let case_sensitive: bool = env::var("CASE_INSENSITIVE").is_err();
 
         //println!("Searching for {:?}", query);
@@ -27,17 +35,17 @@ impl<'a> Config<'a> {
     }
 
     pub fn run(&self) -> Result<(), Box<dyn Error>> {
-        let content: String = fs::read_to_string(self.file_name)
+        let content: String = fs::read_to_string(&self.file_name)
             .map_err(|err| {
                 "something went wrong reading the file"
             })?;
         let results = if self.case_sensitive {
-            search::search_case_sensitive(self.query, &content)
+            search::search_case_sensitive(&self.query, &content)
         } else {
-            search::search_case_insensitive(self.query, &content)
+            search::search_case_insensitive(&self.query, &content)
         };
 
-        for line in results {
+        for line in results.iter() {
             println!("{:?}", line);
         }
 

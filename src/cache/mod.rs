@@ -1,3 +1,4 @@
+use std::error::Error;
 use std::marker::PhantomData;
 
 struct Cacher<T, U, R>

@@ -36,7 +36,7 @@ impl Config {
 
     pub fn run(&self) -> Result<(), Box<dyn Error>> {
         let content: String = fs::read_to_string(&self.file_name)
-            .map_err(|err| {
+            .map_err(|_err| {
                 "something went wrong reading the file"
             })?;
         let results = if self.case_sensitive {

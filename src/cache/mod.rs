@@ -1,41 +1,49 @@
-use std::marker::PhantomData;
-use std::mem;
 use std::thread;
 use std::time::Duration;
 
-struct Cacher<T, U, R>
-    where
-        T: Fn(U) -> R
+struct Cacher<T, R>
 {
     calculation: T,
     value: Option<R>,
-    __phantom: PhantomData<U>,
 }
 
-impl<T, U, R> Cacher<T, U, R>
-    where
-        T: Fn(U) -> R
-{
+impl<T, R> Cacher<T, R> {
     fn new(calculation: T) -> Self {
         Self {
             calculation,
             value: None,
-            __phantom: PhantomData,
         }
     }
 
-    fn value(&mut self, arg: U) -> &R {
-        let current = &mut self.value;
+    fn value<U>(&mut self, arg: U) -> &R
+        where T: FnMut(U) -> R
+    {
+        let current: &mut Option<R> = &mut self.value;
         match current {
             Some(v) => v,
             None => {
-                let v = (self.calculation)(arg);
-                mem::replace(current, Some(v));
-                let current = current.as_ref();
-                current.unwrap()
+                let v: R = (self.calculation)(arg);
+                *current = Some(v);
+                current.as_ref().unwrap()
             }
         }
     }
+
+    /*
+    // https://github.com/rust-lang/rust/issues/53589
+    fn value<U>(&mut self, arg: U) -> &R
+        where T: FnMut(U) -> R
+    {
+        match self.value.as_ref() {
+            Some(v) => v,
+            None => {
+                let v = (self.calculation)(arg);
+                self.value = Some(v);
+                self.value.as_ref().unwrap()
+            }
+        }
+    }
+    */
 }
 
 
@@ -61,6 +69,6 @@ mod tests {
             expensive_result.value(1)
         );
 
-        assert_eq!(&2, expensive_result.value(1));
+        assert_eq!(2, *expensive_result.value(1));
     }
 }

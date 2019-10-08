@@ -3,15 +3,14 @@
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
     <cargoProject FILE="$PROJECT_DIR$/libminigrep/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/adder/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4f1105-087f-412c-8d7b-1775be1a52f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/iterator/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/minigrep.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minigrep.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cache/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cache/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/mod.rs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,51 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iterator/mod.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-              <folding>
-                <element signature="e#75#76#0" expanded="true" />
-                <element signature="e#110#111#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/search/mod.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cache/mod.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="228">
+              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -98,9 +57,10 @@
         <option value="$PROJECT_DIR$/poem.txt" />
         <option value="$PROJECT_DIR$/src/lib/search.rs" />
         <option value="$PROJECT_DIR$/src/iterator/mod.rs" />
+        <option value="$PROJECT_DIR$/src/search/mod.rs" />
         <option value="$PROJECT_DIR$/src/main.rs" />
         <option value="$PROJECT_DIR$/src/lib.rs" />
-        <option value="$PROJECT_DIR$/src/search/mod.rs" />
+        <option value="$PROJECT_DIR$/src/deref/mod.rs" />
         <option value="$PROJECT_DIR$/src/cache/mod.rs" />
       </list>
     </option>
@@ -144,6 +104,12 @@
               <item name="minigrep" type="b2602c69:ProjectViewProjectNode" />
               <item name="minigrep" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="deref" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="minigrep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="minigrep" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="iterator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -152,16 +118,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="search" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="minigrep" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,12 +137,12 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/lib/search" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib/search" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,7 +157,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.run">
+  <component name="RunManager" selected="Cargo Command.Test cache::tests::it_works">
+    <configuration name="Test cache::tests::it_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package minigrep --lib cache::tests::it_works -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test deref::tests::it_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package minigrep --lib deref::tests::it_works -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="Test iterator::tests::calling_next_directly" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="test --package minigrep --lib iterator::tests::calling_next_directly -- --exact" />
@@ -252,9 +234,13 @@
       <item itemvalue="Cargo Command.run error" />
       <item itemvalue="Cargo Command.Test iterator::tests::calling_next_directly" />
       <item itemvalue="Cargo Command.Test iterator::tests::using_other_iterator_trait_methods" />
+      <item itemvalue="Cargo Command.Test cache::tests::it_works" />
+      <item itemvalue="Cargo Command.Test deref::tests::it_works" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo Command.Test cache::tests::it_works" />
+        <item itemvalue="Cargo Command.Test deref::tests::it_works" />
         <item itemvalue="Cargo Command.Test iterator::tests::using_other_iterator_trait_methods" />
         <item itemvalue="Cargo Command.Test iterator::tests::calling_next_directly" />
       </list>
@@ -281,35 +267,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test - 2019.09.29 at 16h 04m 33s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_deref__tests__it_works - 2019.10.08 at 17h 07m 14s.xml">
+      <configuration name="Test deref::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="test - 2019.09.29 at 16h 11m 33s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_deref__tests__it_works - 2019.10.08 at 17h 08m 18s.xml">
+      <configuration name="Test deref::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="test - 2019.09.29 at 17h 43m 04s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_deref__tests__it_works - 2019.10.08 at 17h 09m 02s.xml">
+      <configuration name="Test deref::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="test - 2019.09.29 at 17h 43m 26s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_deref__tests__it_works - 2019.10.08 at 17h 10m 29s.xml">
+      <configuration name="Test deref::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="test - 2019.09.29 at 17h 47m 34s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_deref__tests__it_works - 2019.10.08 at 17h 11m 40s.xml">
+      <configuration name="Test deref::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_iterator__tests__calling_next_directly - 2019.09.29 at 18h 10m 58s.xml">
-      <configuration name="Test iterator::tests::calling_next_directly" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_cache__tests__it_works - 2019.10.08 at 17h 11m 57s.xml">
+      <configuration name="Test cache::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_iterator__tests__calling_next_directly - 2019.09.29 at 18h 11m 35s.xml">
-      <configuration name="Test iterator::tests::calling_next_directly" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_cache__tests__it_works - 2019.10.08 at 17h 14m 30s.xml">
+      <configuration name="Test cache::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_iterator__tests__using_other_iterator_trait_methods - 2019.09.29 at 18h 14m 16s.xml">
-      <configuration name="Test iterator::tests::using_other_iterator_trait_methods" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_cache__tests__it_works - 2019.10.08 at 17h 14m 53s.xml">
+      <configuration name="Test cache::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="test - 2019.09.29 at 18h 35m 56s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_cache__tests__it_works - 2019.10.08 at 17h 15m 07s.xml">
+      <configuration name="Test cache::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="test - 2019.09.29 at 18h 42m 04s.xml">
-      <configuration name="test" configurationId="CargoCommandRunConfiguration" />
+    <history-entry file="Test_cache__tests__it_works - 2019.10.08 at 17h 16m 07s.xml">
+      <configuration name="Test cache::tests::it_works" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -326,22 +312,22 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.2671533" visible="true" weight="0.22051696" />
-      <window_info id="Structure" order="2" sideWeight="0.73284674" side_tool="true" weight="0.22051696" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.26569343" visible="true" weight="0.23344104" />
+      <window_info id="Structure" order="2" sideWeight="0.7343066" side_tool="true" weight="0.23021002" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info id="Resources Explorer" order="5" />
+      <window_info id="Resources Explorer" order="5" weight="0.32956383" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Tail" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.529927" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.48175183" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.329927" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32846716" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.80145985" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329927" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329927" />
+      <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Cargo" order="1" />
       <window_info anchor="right" id="Flutter Inspector" order="2" />
@@ -388,13 +374,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/search/mod.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/search/mod.rs" />
     <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/result.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -423,17 +403,6 @@
     <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/str/pattern.rs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/option.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1127">
-          <caret line="155" column="4" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
-          <folding>
-            <element signature="e#58#59#0" expanded="true" />
-            <element signature="e#75#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/slice/mod.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -452,31 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iterator/mod.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="e#75#76#0" expanded="true" />
-            <element signature="e#110#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/str/mod.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -488,17 +432,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/adder/Cargo.toml" />
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/mem/mod.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="616" column="7" selection-start-line="616" selection-start-column="7" selection-end-line="616" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libstd/thread/mod.rs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cargo.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/ops/deref.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/search/mod.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iterator/mod.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#75#76#0" expanded="true" />
+            <element signature="e#110#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/option.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="236" column="11" selection-start-line="236" selection-start-column="11" selection-end-line="236" selection-end-column="11" />
+          <folding>
+            <element signature="e#58#59#0" expanded="true" />
+            <element signature="e#75#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deref/mod.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/mod.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="228">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
         </state>
       </provider>
     </entry>

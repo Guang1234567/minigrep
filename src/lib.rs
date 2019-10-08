@@ -5,6 +5,7 @@ use std::error::Error;
 mod search;
 mod cache;
 mod iterator;
+mod deref;
 
 pub struct Config {
     pub query: String,

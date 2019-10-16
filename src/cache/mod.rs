@@ -15,12 +15,13 @@ impl<T, R> Cacher<T, R> {
         }
     }
 
+
     fn value<U>(&mut self, arg: U) -> &R
         where T: FnMut(U) -> R
     {
         let current: &mut Option<R> = &mut self.value;
         match current {
-            Some(v) => v,
+            Some(ref v) => v,
             None => {
                 let v: R = (self.calculation)(arg);
                 *current = Some(v);
@@ -29,21 +30,39 @@ impl<T, R> Cacher<T, R> {
         }
     }
 
-    /*
-    // https://github.com/rust-lang/rust/issues/53589
-    fn value<U>(&mut self, arg: U) -> &R
+
+    // https://github.com/rust-lang/rust/issues/53589#issuecomment-539593375
+    fn value2<U>(&mut self, arg: U) -> &R
         where T: FnMut(U) -> R
     {
-        match self.value.as_ref() {
-            Some(v) => v,
-            None => {
-                let v = (self.calculation)(arg);
-                self.value = Some(v);
-                self.value.as_ref().unwrap()
-            }
+        if self.value.is_none() {
+            self.value = Some((self.calculation)(arg));
+        }
+
+        self.value.as_ref().unwrap()
+    }
+
+
+    fn value3<U>(&mut self, arg: U) -> &R
+        where T: FnMut(U) -> R
+    {
+        if self.is_none() {
+            self.value = Some((self.calculation)(arg));
+        }
+
+        self.value.as_ref().unwrap()
+    }
+
+    fn is_some(&self) -> bool {
+        match self.value {
+            Some(_) => true,
+            None => false,
         }
     }
-    */
+
+    fn is_none(&self) -> bool {
+        !self.is_some()
+    }
 }
 
 
@@ -61,14 +80,14 @@ mod tests {
 
         println!(
             "Today, do {} pushups!",
-            expensive_result.value(1)
+            expensive_result.value3(1)
         );
 
         println!(
             "Next, do {} situps!",
-            expensive_result.value(1)
+            expensive_result.value3(1)
         );
 
-        assert_eq!(2, *expensive_result.value(1));
+        assert_eq!(2, *expensive_result.value3(1));
     }
 }

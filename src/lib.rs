@@ -6,6 +6,13 @@ mod search;
 mod cache;
 mod iterator;
 mod deref;
+mod memory;
+mod rc;
+mod ref_demo;
+mod tree;
+mod thread_demo;
+mod oop_demo;
+mod server_demo;
 
 pub struct Config {
     pub query: String,

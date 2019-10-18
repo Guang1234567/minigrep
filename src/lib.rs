@@ -12,7 +12,9 @@ mod ref_demo;
 mod tree;
 mod thread_demo;
 mod oop_demo;
-mod server_demo;
+pub mod server_demo;
+pub mod thread_pool;
+
 
 pub struct Config {
     pub query: String,
@@ -60,3 +62,5 @@ impl Config {
         Ok(())
     }
 }
+
+

@@ -2,20 +2,20 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 #[derive(Debug)]
-enum List_ref_version<'a, T> {
-    Cons(T, &'a Box<List_ref_version<'a, T>>),
+enum ListRefVersion<'a, T> {
+    Cons(T, &'a Box<ListRefVersion<'a, T>>),
     Nil,
 }
 
 #[derive(Debug)]
-enum List_rc_version<T> {
-    Cons(T, Rc<List_rc_version<T>>),
+enum ListRcVersion<T> {
+    Cons(T, Rc<ListRcVersion<T>>),
     Nil,
 }
 
 #[derive(Debug)]
-enum List_rc_ref_version<T> {
-    Cons(Rc<RefCell<T>>, Rc<List_rc_ref_version<T>>),
+enum ListRcRefVersion<T> {
+    Cons(Rc<RefCell<T>>, Rc<ListRcRefVersion<T>>),
     Nil,
 }
 
@@ -26,7 +26,7 @@ mod tests {
 
     #[test]
     fn test_list_ref_version() {
-        use crate::rc::List_ref_version::{Cons, Nil};
+        use crate::rc::ListRefVersion::{Cons, Nil};
         /*
          let a = Cons(5, Box::new(Cons(10, Box::new(Nil))));
          let b = Cons(3, Box::new(a));
@@ -48,7 +48,7 @@ mod tests {
 
     #[test]
     fn test_list_rc_version() {
-        use crate::rc::List_rc_version::{Cons, Nil};
+        use crate::rc::ListRcVersion::{Cons, Nil};
 
         let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
         println!("count after creating a = {}", Rc::strong_count(&a));
@@ -69,7 +69,7 @@ mod tests {
 
     #[test]
     fn test_list_rc_ref_version() {
-        use crate::rc::List_rc_ref_version::{Cons, Nil};
+        use crate::rc::ListRcRefVersion::{Cons, Nil};
 
         let value = Rc::new(RefCell::new(5));
 

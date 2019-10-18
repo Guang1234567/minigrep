@@ -1,8 +1,5 @@
 use std::fmt::{Debug, Error, Formatter};
-use std::sync::{Arc, Mutex};
-use std::sync::mpsc;
-use std::thread;
-use std::time::Duration;
+
 
 trait State: Debug {
     fn request_review(self: Box<Self>) -> Box<dyn State>;
@@ -119,6 +116,10 @@ impl Post {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::sync::{Arc, Mutex};
+    use std::sync::mpsc;
+    use std::thread;
+    use std::time::Duration;
 
     #[test]
     fn it_works() {

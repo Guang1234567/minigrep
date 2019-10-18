@@ -1,7 +1,6 @@
 use std::env;
 use std::process;
-
-mod server_demo;
+use minigrep::server_demo;
 
 fn main() {
 
@@ -17,9 +16,7 @@ fn main() {
         process::exit(1);
     }*/
 
-    println!("dgsdgsdg");
     server_demo::demo_tcp_listener();
-    println!("eryy");
 }
 
 

@@ -1,5 +1,6 @@
-use std::thread;
-use std::time::Duration;
+
+
+
 
 struct Cacher<T, R>
 {
@@ -68,6 +69,9 @@ impl<T, R> Cacher<T, R> {
 
 #[cfg(test)]
 mod tests {
+    use std::thread;
+    use std::time::Duration;
+
     use super::*;
 
     #[test]

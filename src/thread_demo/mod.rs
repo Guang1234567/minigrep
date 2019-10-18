@@ -1,11 +1,12 @@
-use std::sync::{Arc, Mutex};
-use std::sync::mpsc;
-use std::thread;
-use std::time::Duration;
+
 
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::sync::{Arc, Mutex};
+    use std::sync::mpsc;
+    use std::thread;
+    use std::time::Duration;
 
     #[test]
     fn it_works() {
